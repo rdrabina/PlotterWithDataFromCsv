@@ -10,7 +10,7 @@ object = Accident.Accident(Area.Area(Area.Localisation.In_built_up_areas, Area.I
 #properties test
 assert object.area.localisation == Area.Localisation.In_built_up_areas
 assert object.area.intersection == Area.Intersection.Out_of_intersection
-assert object.date == Date.Date(12, 30, 5, 11, 2018)
+assert object.date == Date.Date(12, 30, 5, 11, 2017)
 assert object.details == Details.Details(Details.TypeOfCollision.Multiple_collisions)
 
 #setters test

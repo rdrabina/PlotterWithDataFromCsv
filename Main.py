@@ -71,6 +71,9 @@ def parser():
     if not all(month.isdigit() for i in month):
         print("Invalid month")
         exit()
+    if not all(year.isdigit() for i in year):
+        print("Invalid year")
+        exit()
 
     try:
         date_object = Date.Date(int(hour), int(minute), int(day), int(month), int(year))
@@ -82,8 +85,8 @@ def parser():
 
 def read_accidents_from_file(date_object):
     localisations = Area.Localisation.make_dictionary()
-    intersections = Area.Intersection.make_directory()
-    type_of_collisions = Details.TypeOfCollision.make_directory()
+    intersections = Area.Intersection.make_dictionary()
+    type_of_collisions = Details.TypeOfCollision.make_dictionary()
 
     try:
         with open('Accidents.csv', 'r', encoding="ISO-8859-1") as csv_file:
@@ -121,6 +124,7 @@ def print_opportunities():
 def print_accidents():
     for i in accidents:
         print(i)
+
 
 if __name__ == '__main__':
     chosen_number = print_opportunities()

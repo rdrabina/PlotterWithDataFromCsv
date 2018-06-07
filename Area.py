@@ -25,7 +25,7 @@ class Intersection(Enum):
     Unknown = 0
 
     @staticmethod
-    def make_directory():
+    def make_dictionary():
         return {'0': Intersection.Unknown,
                 '1': Intersection.Out_of_intersection,
                 '2': Intersection.Intersection_in_X,

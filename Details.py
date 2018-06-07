@@ -12,7 +12,7 @@ class TypeOfCollision(Enum):
     Unknown = 'NA'
 
     @staticmethod
-    def make_directory():
+    def make_dictionary():
         return {'1': TypeOfCollision.Frontal,
                 '2': TypeOfCollision.From_the_rear,
                 '3': TypeOfCollision.By_the_side,
